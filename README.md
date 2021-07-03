@@ -1,3 +1,4 @@
 # Shabdkosh
 
-Install discord.py from pip
+pip install discord.py
+pip install googletrans==3.1.0a0
