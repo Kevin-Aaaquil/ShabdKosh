@@ -6,7 +6,7 @@ client = discord.Client()
 @client.event
 async def on_ready():
   print('{0.user} is active now.'.format(client))
-  #await client.change_presence(activity = discord.Game(''))
+  await client.change_presence(activity = discord.Game('with words'))
 
 @client.event
 async def on_guild_join(guild):
@@ -22,5 +22,16 @@ async def on_message(message):
       return
 
     if message.content.startswith('Hello'):
-      await message.channel.send('Hi!')
+      await message.channel.send('Hi')
+      
+    if message.content.startswith('!tle'):
+      msg = message.content.split("\"")
+      print(msg)
+      tle = translator.translate(msg[1], dest=msg[2].lstrip())
+      await message.channel.send("`{}` -> `{}`".format(msg[1], tle.text))
+    
+    if message.content.startswith('!dt'):
+      msg = message.content[8:]
+      await message.channel.send("The message is in {}".format({translator.detect(msg)}))
+      
       
