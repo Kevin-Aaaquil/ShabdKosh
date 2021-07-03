@@ -1,3 +1,4 @@
+# import discord dependencies from pip
 import discord
 
 client = discord.Client()
