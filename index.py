@@ -37,20 +37,34 @@ async def on_message(message):
     if message.content.startswith('*Hello'):
       await message.channel.send('https://tenor.com/view/hello-there-gif-9442662')
       print(googletrans.LANGUAGES)
-      #url = 'https://g.tenor.com/v1/search?q=hello&key={os.environ['TENOR']}&limit=8'
-      #response = await requests.get(url)
-      #json_data = json.loads(response.text)
-      #print(json_data)
+      
     
     if message.content.startswith('*tle'):
-          msg = message.content.split("\"")
-          print(msg)
-          tle = translator.translate(msg[1], dest=msg[2].lstrip())
-          await message.channel.send("`{}` -> `{}`".format(msg[1], tle.text))
+      msg = message.content.split("\"")
+      print(msg)
+      tle = translator.translate(msg[1], dest=msg[2].lstrip())
+      await message.channel.send("`{}` -> `{}`".format(msg[1], tle.text))
 
     if message.content.startswith('*dt'):
-      msg = message.content[8:]
-      await message.channel.send("The message is in {}".format({translator.detect(msg)}))
+      msg = message.content[4:]
+      await message.channel.send("The message is in {}".format(translator.detect(msg)))
+      
+    ldict=googletrans.LANGUAGES
+
+
+    if message.content.startswith('*dt'):
+      msg = message.content[4:]
+      language = str(translator.detect(msg))
+      l1 = language.split("=",1)[1]
+      print(l1)
+      lcode = l1.split(",")[0]
+    #   l = list(language)
+    #   print(l)
+    #   lang =l [14:16]
+    #   s = ""
+    #   lcode = s.join(lang)
+      print(lcode)
+      await message.channel.send("The message is in {}".format(ldict.get(lcode)))
         
 keep_alive()
 
