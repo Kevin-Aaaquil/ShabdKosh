@@ -34,4 +34,9 @@ async def on_message(message):
       msg = message.content[8:]
       await message.channel.send("The message is in {}".format({translator.detect(msg)}))
       
+keep_alive()
+
+my_secret = os.environ['TOKEN']
+client.run(my_secret)
+      
       
