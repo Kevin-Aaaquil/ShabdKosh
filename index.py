@@ -2,7 +2,6 @@ import os
 import discord
 import googletrans
 from datetime import datetime
-from keep_alive import keep_alive
 from google_speech import Speech  # for voice module
 from gif import giffy
 from discord.flags import Intents
