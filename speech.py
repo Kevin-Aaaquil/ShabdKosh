@@ -48,21 +48,3 @@ if 'hello' in recog1.recognize_google(audio):
         except spr.RequestError as e:
             print("Unable to provide required output".format(e))
 
-
-
-@client.command(pass_context = True)
-async def join(ctx):
-    if (ctx.author.voice):
-        channel = ctx.message.author.voice.channel
-        await channel.connect()
-    else:
-        await ctx.send("You are not in a voice channel, you must be in a voice channel to run this command")
-
-
-@client.command(pass_context = True)
-async def leave(ctx):
-    if (ctx.voice_client):
-        await ctx.guild.voice_client.disconnect()
-        await ctx.send("I left the voice channel")
-    else:
-        await ctx.send("I am not in a voice channel")
