@@ -26,7 +26,7 @@ At present we have a few quite awesome commands, all of which require a secret p
   
   
   ### People who contributed
-  https://github.com/kritical1326
-  https://github.com/tanmaysharma015
-  https://github.com/kritiikakkar/
-  https://github.com/Kevin-Aaaquil
+ * https://github.com/kritical1326
+ * https://github.com/tanmaysharma015
+ * https://github.com/kritiikakkar/
+ * https://github.com/Kevin-Aaaquil
