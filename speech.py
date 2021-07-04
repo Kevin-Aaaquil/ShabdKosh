@@ -1,19 +1,14 @@
 from discord.flags import Intents
 import speech_recognition as spr
-import discord
 from googletrans import Translator
 from discord.ext import commands
 from gtts import gTTS
 import os
 
-intents = discord.Intents.default()
-
-client = commands.Bot(command_prefix = '*', intents=intents)
-
-
 
 recog1 = spr.Recognizer()
 recog2 = spr.Recognizer()
+
 
 mc = spr.Microphone(device_index=0)
 
@@ -22,8 +17,8 @@ with mc as source:
     print("Speak 'Hello' to initiate the Translation!")
     print("----------------------------")
     audio = recog1.listen(source)
-
-
+    
+    
 if 'hello' in recog1.recognize_google(audio):
     recog1 = spr.Recognizer()
     translator = Translator()
@@ -47,4 +42,3 @@ if 'hello' in recog1.recognize_google(audio):
             print("Unable to understand the input")
         except spr.RequestError as e:
             print("Unable to provide required output".format(e))
-
