@@ -21,3 +21,5 @@ At present we have a few quite awesome commands, all of which require a secret p
 * `*syn` `word`  :- The bot will tell you synonyms of this word,
 
 * `*ant` `word`  :- The bot will tell you antonyms of this word,
+
+* `*help*  :- The bot will display all the available commands in the bot
