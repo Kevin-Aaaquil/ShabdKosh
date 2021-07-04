@@ -64,9 +64,9 @@ async def on_message(message):
       tle = translator.translate(msg[1], dest=msg[2].lstrip())
       await message.channel.send("`{}` -> `{}`".format(msg[1], tle.text))
 
-    if message.content.startswith('*dt'):
-      msg = message.content[4:]
-      await message.channel.send("The message is in {}".format(translator.detect(msg)))
+#     if message.content.startswith('*dt'):
+#       msg = message.content[4:]
+#       await message.channel.send("The message is in {}".format(translator.detect(msg)))
       
     ldict=googletrans.LANGUAGES
 
