@@ -1,16 +1,13 @@
 import os
 import sox
 import discord
-import requests
-import json
 import asyncio
 from discord.ext import commands
 import googletrans
 from datetime import datetime
-from googletrans import Translator
 from keep_alive import keep_alive
 from google_speech import Speech # for voice module
-import languages_supported.py as ls
+from PyDictionary import PyDictionary
 
 
 client = discord.Client()
@@ -70,7 +67,6 @@ async def on_message(message):
       
     ldict=googletrans.LANGUAGES
 
-
     if message.content.startswith('*dt'):
       msg = message.content[4:]
       language = str(translator.detect(msg))
@@ -84,6 +80,30 @@ async def on_message(message):
     #   lcode = s.join(lang)
       print(lcode)
       await message.channel.send("The message is in {}".format(ldict.get(lcode)))
+   
+    dictionary=PyDictionary()
+
+    """if message.content.startswith('*th'):
+      msg = message.content[4:]
+      #print(msg)
+      meaning = py_thesaurus.Thesaurus(msg)
+      print(meaning.get_synonym())
+      await message.channel.send(meaning.get_definition())"""
+  
+   if message.content.startswith('*dict'):
+      msg = message.content[6:]
+      #print(msg)
+      await message.channel.send(dictionary.meaning(msg))
+
+   if message.content.startswith('*syn'):
+      msg = message.content[5:]
+      #print(msg)
+      await message.channel.send(dictionary.synonym(msg)) 
+
+   if message.content.startswith('*ant'):
+      msg = message.content[5:]
+      #print(msg)
+      await message.channel.send(dictionary.antonym(msg))
 
       
       
