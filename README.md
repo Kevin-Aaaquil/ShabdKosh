@@ -7,7 +7,7 @@ A hackathon project made using python. "Shabdkosh" is a discord bot that gives t
 ## Commands
 At present we have a few quite awesome commands, all of which require a secret password 🤫 `*`
 
-* `*Hello`  :- The bot will welcome you into its hearts with a cute gif,
+* `*Hello`  :- The bot will welcome you into its heart with a cute gif,
 
 * `*lang`   :- The bot will show you its might: basically all the languages it can understand,
 
