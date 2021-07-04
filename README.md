@@ -2,7 +2,7 @@
 
 A hackathon project made using python. "Shabdkosh" is a discord bot that gives the users from diffrent language backgrounds to converse with each other with ease. With its simple to use commands you can easily translate any message you write in discord into more than a 100 languages.
 
-<a href="https://discord.com/oauth2/authorize?client_id=860815339791974400&scope=bot&permissions=8"><img width="200px" title="Shabdkosh" src="https://github.com/Kevin-Aaaquil/shabdkosh/blob/main/.github/ShabdKosh.png"/><a>
+<a href="https://discord.com/oauth2/authorize?client_id=860815339791974400&scope=bot&permissions=8"><img align="center" width="200" height="200"title="Shabdkosh" src="https://github.com/Kevin-Aaaquil/shabdkosh/blob/main/.github/ShabdKosh.png"/><a>
 
 
 
