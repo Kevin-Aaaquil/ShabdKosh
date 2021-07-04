@@ -5,7 +5,6 @@ A hackathon project made using python. "Shabdkosh" is a discord bot that gives t
 <a href="https://discord.com/oauth2/authorize?client_id=860815339791974400&scope=bot&permissions=8"><img align="right" width="400" height="400" title="Shabdkosh" src="https://github.com/Kevin-Aaaquil/shabdkosh/blob/main/.github/ShabdKosh.png"/><a>
 
 
-
 ## Commands
 At present we have a few quite awesome commands, all of which require a secret password 🤫 `*`
 
