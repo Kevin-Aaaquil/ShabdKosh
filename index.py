@@ -83,12 +83,12 @@ async def on_message(message):
    
     dictionary=PyDictionary()
 
-    """if message.content.startswith('*th'):
-      msg = message.content[4:]
+# if message.content.startswith('*th'):
+#       msg = message.content[4:]
       #print(msg)
-      meaning = py_thesaurus.Thesaurus(msg)
-      print(meaning.get_synonym())
-      await message.channel.send(meaning.get_definition())"""
+      #meaning = py_thesaurus.Thesaurus(msg)
+      #print(meaning.get_synonym())
+      #await message.channel.send(meaning.get_definition())"""
   
    if message.content.startswith('*dict'):
       msg = message.content[6:]
